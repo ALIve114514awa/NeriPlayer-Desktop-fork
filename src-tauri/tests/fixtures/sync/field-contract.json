@@ -1,0 +1,2112 @@
+{
+  "schemaVersion": 1,
+  "androidHead": "06cae09d5cdddfc8662fa7868245f83288aca0d7",
+  "desktopHead": "ededbee3946e5ebadc7f6ada5676e69cdb35afa7",
+  "types": [
+    {
+      "name": "SyncData",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "version",
+          "kotlinType": "String",
+          "default": "\"2.0\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "version",
+            "rustType": "String",
+            "prost": "string, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "deviceId",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "device_id",
+            "rustType": "String",
+            "prost": "string, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "deviceName",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "device_name",
+            "rustType": "String",
+            "prost": "string, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "lastModified",
+          "kotlinType": "Long",
+          "default": "System.currentTimeMillis()",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "last_modified",
+            "rustType": "i64",
+            "prost": "int64, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "playlists",
+          "kotlinType": "List<SyncPlaylist>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "playlists",
+            "rustType": "Vec<ProtoSyncPlaylist>",
+            "prost": "message, repeated, tag = \"5\""
+          }
+        },
+        {
+          "tag": 6,
+          "name": "favoritePlaylists",
+          "kotlinType": "List<SyncFavoritePlaylist>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "favorite_playlists",
+            "rustType": "Vec<ProtoSyncFavoritePlaylist>",
+            "prost": "message, repeated, tag = \"6\""
+          }
+        },
+        {
+          "tag": 7,
+          "name": "recentPlays",
+          "kotlinType": "List<SyncRecentPlay>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "recent_plays",
+            "rustType": "Vec<ProtoSyncRecentPlay>",
+            "prost": "message, repeated, tag = \"7\""
+          }
+        },
+        {
+          "tag": 8,
+          "name": "syncLog",
+          "kotlinType": "List<SyncLogEntry>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "sync_log",
+            "rustType": "Vec<ProtoSyncLogEntry>",
+            "prost": "message, repeated, tag = \"8\""
+          }
+        },
+        {
+          "tag": 9,
+          "name": "recentPlayDeletions",
+          "kotlinType": "List<SyncRecentPlayDeletion>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "recent_play_deletions",
+            "rustType": "Vec<ProtoSyncRecentPlayDeletion>",
+            "prost": "message, repeated, tag = \"9\""
+          }
+        },
+        {
+          "tag": 10,
+          "name": "playbackStats",
+          "kotlinType": "List<SyncTrackStat>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "playback_stats",
+            "rustType": "Vec<ProtoSyncTrackStat>",
+            "prost": "message, repeated, tag = \"10\""
+          }
+        },
+        {
+          "tag": 11,
+          "name": "playbackStatsClearedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "playback_stats_cleared_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"11\""
+          }
+        },
+        {
+          "tag": 12,
+          "name": "playbackStatBuckets",
+          "kotlinType": "List<SyncPlaybackStatBucket>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "playback_stat_buckets",
+            "rustType": "Vec<ProtoSyncPlaybackStatBucket>",
+            "prost": "message, repeated, tag = \"12\""
+          }
+        },
+        {
+          "tag": 13,
+          "name": "playlistSongDeletions",
+          "kotlinType": "List<SyncPlaylistSongDeletion>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "playlist_song_deletions",
+            "rustType": "Vec<ProtoSyncPlaylistSongDeletion>",
+            "prost": "message, repeated, tag = \"13\""
+          }
+        },
+        {
+          "tag": 14,
+          "name": "playlistUsageStats",
+          "kotlinType": "List<SyncPlaylistUsageStat>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 15,
+          "name": "localPlaylistPlaybackStats",
+          "kotlinType": "List<SyncLocalPlaylistPlaybackStat>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 16,
+          "name": "localPlaylistPlaybackBuckets",
+          "kotlinType": "List<SyncLocalPlaylistPlaybackBucket>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 17,
+          "name": "biliVideoSkipRules",
+          "kotlinType": "List<SyncBiliVideoSkipRule>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        }
+      ]
+    },
+    {
+      "name": "SyncPlaylist",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "id",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "name",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "name",
+            "rustType": "String",
+            "prost": "string, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "songs",
+          "kotlinType": "List<SyncSong>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "songs",
+            "rustType": "Vec<ProtoSyncSong>",
+            "prost": "message, repeated, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "createdAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "created_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "modifiedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "modified_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"5\""
+          }
+        },
+        {
+          "tag": 6,
+          "name": "isDeleted",
+          "kotlinType": "Boolean",
+          "default": "false",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "is_deleted",
+            "rustType": "bool",
+            "prost": "bool, tag = \"6\""
+          }
+        },
+        {
+          "tag": 7,
+          "name": "songOrderVersion",
+          "kotlinType": "Int",
+          "default": "LEGACY_SONG_ORDER_VERSION",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "song_order_version",
+            "rustType": "i32",
+            "prost": "int32, tag = \"7\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "SyncSong",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "id",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "name",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "name",
+            "rustType": "String",
+            "prost": "string, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "artist",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "artist",
+            "rustType": "String",
+            "prost": "string, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "album",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "album",
+            "rustType": "String",
+            "prost": "string, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "albumId",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "album_id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"5\""
+          }
+        },
+        {
+          "tag": 6,
+          "name": "durationMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "duration_ms",
+            "rustType": "i64",
+            "prost": "int64, tag = \"6\""
+          }
+        },
+        {
+          "tag": 7,
+          "name": "coverUrl",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "cover_url",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"7\""
+          }
+        },
+        {
+          "tag": 8,
+          "name": "mediaUri",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "media_uri",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"8\""
+          }
+        },
+        {
+          "tag": 9,
+          "name": "addedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "added_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"9\""
+          }
+        },
+        {
+          "tag": 10,
+          "name": "matchedLyric",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "matched_lyric",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"10\""
+          }
+        },
+        {
+          "tag": 11,
+          "name": "matchedTranslatedLyric",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "matched_translated_lyric",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"11\""
+          }
+        },
+        {
+          "tag": 12,
+          "name": "matchedLyricSource",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "matched_lyric_source",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"12\""
+          }
+        },
+        {
+          "tag": 13,
+          "name": "matchedSongId",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "matched_song_id",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"13\""
+          }
+        },
+        {
+          "tag": 14,
+          "name": "userLyricOffsetMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "user_lyric_offset_ms",
+            "rustType": "i64",
+            "prost": "int64, tag = \"14\""
+          }
+        },
+        {
+          "tag": 15,
+          "name": "customCoverUrl",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "custom_cover_url",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"15\""
+          }
+        },
+        {
+          "tag": 16,
+          "name": "customName",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "custom_name",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"16\""
+          }
+        },
+        {
+          "tag": 17,
+          "name": "customArtist",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "custom_artist",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"17\""
+          }
+        },
+        {
+          "tag": 18,
+          "name": "originalName",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "original_name",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"18\""
+          }
+        },
+        {
+          "tag": 19,
+          "name": "originalArtist",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "original_artist",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"19\""
+          }
+        },
+        {
+          "tag": 20,
+          "name": "originalCoverUrl",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "original_cover_url",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"20\""
+          }
+        },
+        {
+          "tag": 21,
+          "name": "originalLyric",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "original_lyric",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"21\""
+          }
+        },
+        {
+          "tag": 22,
+          "name": "originalTranslatedLyric",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "original_translated_lyric",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"22\""
+          }
+        },
+        {
+          "tag": 23,
+          "name": "channelId",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "channel_id",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"23\""
+          }
+        },
+        {
+          "tag": 24,
+          "name": "audioId",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "audio_id",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"24\""
+          }
+        },
+        {
+          "tag": 25,
+          "name": "subAudioId",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "sub_audio_id",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"25\""
+          }
+        },
+        {
+          "tag": 26,
+          "name": "playlistContextId",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "playlist_context_id",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"26\""
+          }
+        },
+        {
+          "tag": 27,
+          "name": "syncMembershipTokens",
+          "kotlinType": "List<SyncCausalToken>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "sync_membership_tokens",
+            "rustType": "Vec<ProtoSyncCausalToken>",
+            "prost": "message, repeated, tag = \"27\""
+          }
+        },
+        {
+          "tag": 28,
+          "name": "syncMetadataVersion",
+          "kotlinType": "Int",
+          "default": "LEGACY_SYNC_METADATA_VERSION",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "sync_metadata_version",
+            "rustType": "i32",
+            "prost": "int32, tag = \"28\""
+          }
+        },
+        {
+          "tag": 29,
+          "name": "legacyAddedAt",
+          "kotlinType": "Long?",
+          "default": "null",
+          "nullable": true,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "legacy_added_at",
+            "rustType": "Option<i64>",
+            "prost": "int64, optional, tag = \"29\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "SyncRecentPlay",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "songId",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "song_id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "song",
+          "kotlinType": "SyncSong",
+          "default": "SyncSong()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "song",
+            "rustType": "Option<ProtoSyncSong>",
+            "prost": "message, optional, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "playedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "played_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "deviceId",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "device_id",
+            "rustType": "String",
+            "prost": "string, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "resumePositionMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        }
+      ]
+    },
+    {
+      "name": "SyncRecentPlayDeletion",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "songId",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "song_id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "album",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "album",
+            "rustType": "String",
+            "prost": "string, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "mediaUri",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "media_uri",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "deletedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "deleted_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "deviceId",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "device_id",
+            "rustType": "String",
+            "prost": "string, tag = \"5\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "SyncPlaylistSongDeletion",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "playlistId",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "playlist_id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "songId",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "song_id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "album",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "album",
+            "rustType": "String",
+            "prost": "string, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "mediaUri",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "media_uri",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "deletedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "deleted_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"5\""
+          }
+        },
+        {
+          "tag": 6,
+          "name": "deviceId",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "device_id",
+            "rustType": "String",
+            "prost": "string, tag = \"6\""
+          }
+        },
+        {
+          "tag": 7,
+          "name": "removedMembershipTokens",
+          "kotlinType": "List<SyncCausalToken>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "removed_membership_tokens",
+            "rustType": "Vec<ProtoSyncCausalToken>",
+            "prost": "message, repeated, tag = \"7\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "SyncFavoritePlaylist",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "id",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "name",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "name",
+            "rustType": "String",
+            "prost": "string, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "coverUrl",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "cover_url",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "trackCount",
+          "kotlinType": "Int",
+          "default": "0",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "track_count",
+            "rustType": "i32",
+            "prost": "int32, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "source",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "source",
+            "rustType": "String",
+            "prost": "string, tag = \"5\""
+          }
+        },
+        {
+          "tag": 6,
+          "name": "songs",
+          "kotlinType": "List<SyncSong>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "songs",
+            "rustType": "Vec<ProtoSyncSong>",
+            "prost": "message, repeated, tag = \"6\""
+          }
+        },
+        {
+          "tag": 7,
+          "name": "addedTime",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "added_time",
+            "rustType": "i64",
+            "prost": "int64, tag = \"7\""
+          }
+        },
+        {
+          "tag": 8,
+          "name": "modifiedAt",
+          "kotlinType": "Long",
+          "default": "addedTime",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "modified_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"8\""
+          }
+        },
+        {
+          "tag": 9,
+          "name": "isDeleted",
+          "kotlinType": "Boolean",
+          "default": "false",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "is_deleted",
+            "rustType": "bool",
+            "prost": "bool, tag = \"9\""
+          }
+        },
+        {
+          "tag": 10,
+          "name": "sortOrder",
+          "kotlinType": "Long",
+          "default": "addedTime",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "sort_order",
+            "rustType": "i64",
+            "prost": "int64, tag = \"10\""
+          }
+        },
+        {
+          "tag": 11,
+          "name": "browseId",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "browse_id",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"11\""
+          }
+        },
+        {
+          "tag": 12,
+          "name": "playlistId",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "playlist_id",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"12\""
+          }
+        },
+        {
+          "tag": 13,
+          "name": "subtitle",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "subtitle",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"13\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "SyncLogEntry",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "timestamp",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "timestamp",
+            "rustType": "i64",
+            "prost": "int64, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "deviceId",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "device_id",
+            "rustType": "String",
+            "prost": "string, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "action",
+          "kotlinType": "SyncAction",
+          "default": "SyncAction.CREATE_PLAYLIST",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "action",
+            "rustType": "i32",
+            "prost": "int32, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "playlistId",
+          "kotlinType": "Long?",
+          "default": "null",
+          "nullable": true,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "playlist_id",
+            "rustType": "Option<i64>",
+            "prost": "int64, optional, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "songId",
+          "kotlinType": "Long?",
+          "default": "null",
+          "nullable": true,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "song_id",
+            "rustType": "Option<i64>",
+            "prost": "int64, optional, tag = \"5\""
+          }
+        },
+        {
+          "tag": 6,
+          "name": "details",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "details",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"6\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "SyncPlaybackCounterShard",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "deviceId",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "device_id",
+            "rustType": "String",
+            "prost": "string, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "epochStartedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "epoch_started_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "totalListenMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "total_listen_ms",
+            "rustType": "i64",
+            "prost": "int64, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "playCount",
+          "kotlinType": "Int",
+          "default": "0",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "play_count",
+            "rustType": "i32",
+            "prost": "int32, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "firstPlayedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "first_played_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"5\""
+          }
+        },
+        {
+          "tag": 6,
+          "name": "lastPlayedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "last_played_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"6\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "SyncTrackStat",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "identityKey",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "identity_key",
+            "rustType": "String",
+            "prost": "string, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "name",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "name",
+            "rustType": "String",
+            "prost": "string, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "artist",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "artist",
+            "rustType": "String",
+            "prost": "string, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "album",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "album",
+            "rustType": "String",
+            "prost": "string, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "totalListenMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "total_listen_ms",
+            "rustType": "i64",
+            "prost": "int64, tag = \"5\""
+          }
+        },
+        {
+          "tag": 6,
+          "name": "playCount",
+          "kotlinType": "Int",
+          "default": "0",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "play_count",
+            "rustType": "i32",
+            "prost": "int32, tag = \"6\""
+          }
+        },
+        {
+          "tag": 7,
+          "name": "lastPlayedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "last_played_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"7\""
+          }
+        },
+        {
+          "tag": 8,
+          "name": "firstPlayedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "first_played_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"8\""
+          }
+        },
+        {
+          "tag": 9,
+          "name": "coverUrl",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "cover_url",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"9\""
+          }
+        },
+        {
+          "tag": 10,
+          "name": "durationMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "duration_ms",
+            "rustType": "i64",
+            "prost": "int64, tag = \"10\""
+          }
+        },
+        {
+          "tag": 11,
+          "name": "mediaUri",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "media_uri",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"11\""
+          }
+        },
+        {
+          "tag": 12,
+          "name": "id",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"12\""
+          }
+        },
+        {
+          "tag": 13,
+          "name": "albumId",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "album_id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"13\""
+          }
+        },
+        {
+          "tag": 14,
+          "name": "counterBaseListenMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "counter_base_listen_ms",
+            "rustType": "i64",
+            "prost": "int64, tag = \"14\""
+          }
+        },
+        {
+          "tag": 15,
+          "name": "counterBasePlayCount",
+          "kotlinType": "Int",
+          "default": "0",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "counter_base_play_count",
+            "rustType": "i32",
+            "prost": "int32, tag = \"15\""
+          }
+        },
+        {
+          "tag": 16,
+          "name": "counterShards",
+          "kotlinType": "List<SyncPlaybackCounterShard>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "counter_shards",
+            "rustType": "Vec<ProtoSyncPlaybackCounterShard>",
+            "prost": "message, repeated, tag = \"16\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "SyncPlaybackStatBucket",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "dayStartAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "day_start_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "identityKey",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "identity_key",
+            "rustType": "String",
+            "prost": "string, tag = \"2\""
+          }
+        },
+        {
+          "tag": 3,
+          "name": "name",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "name",
+            "rustType": "String",
+            "prost": "string, tag = \"3\""
+          }
+        },
+        {
+          "tag": 4,
+          "name": "artist",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "artist",
+            "rustType": "String",
+            "prost": "string, tag = \"4\""
+          }
+        },
+        {
+          "tag": 5,
+          "name": "album",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "album",
+            "rustType": "String",
+            "prost": "string, tag = \"5\""
+          }
+        },
+        {
+          "tag": 6,
+          "name": "totalListenMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "total_listen_ms",
+            "rustType": "i64",
+            "prost": "int64, tag = \"6\""
+          }
+        },
+        {
+          "tag": 7,
+          "name": "playCount",
+          "kotlinType": "Int",
+          "default": "0",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "play_count",
+            "rustType": "i32",
+            "prost": "int32, tag = \"7\""
+          }
+        },
+        {
+          "tag": 8,
+          "name": "lastPlayedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "last_played_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"8\""
+          }
+        },
+        {
+          "tag": 9,
+          "name": "firstPlayedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "first_played_at",
+            "rustType": "i64",
+            "prost": "int64, tag = \"9\""
+          }
+        },
+        {
+          "tag": 10,
+          "name": "coverUrl",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "cover_url",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"10\""
+          }
+        },
+        {
+          "tag": 11,
+          "name": "durationMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "duration_ms",
+            "rustType": "i64",
+            "prost": "int64, tag = \"11\""
+          }
+        },
+        {
+          "tag": 12,
+          "name": "mediaUri",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "media_uri",
+            "rustType": "Option<String>",
+            "prost": "string, optional, tag = \"12\""
+          }
+        },
+        {
+          "tag": 13,
+          "name": "id",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"13\""
+          }
+        },
+        {
+          "tag": 14,
+          "name": "albumId",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "album_id",
+            "rustType": "i64",
+            "prost": "int64, tag = \"14\""
+          }
+        },
+        {
+          "tag": 15,
+          "name": "counterBaseListenMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "counter_base_listen_ms",
+            "rustType": "i64",
+            "prost": "int64, tag = \"15\""
+          }
+        },
+        {
+          "tag": 16,
+          "name": "counterBasePlayCount",
+          "kotlinType": "Int",
+          "default": "0",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "counter_base_play_count",
+            "rustType": "i32",
+            "prost": "int32, tag = \"16\""
+          }
+        },
+        {
+          "tag": 17,
+          "name": "counterShards",
+          "kotlinType": "List<SyncPlaybackCounterShard>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "counter_shards",
+            "rustType": "Vec<ProtoSyncPlaybackCounterShard>",
+            "prost": "message, repeated, tag = \"17\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "SyncPlaylistUsageStat",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "playlistKey",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 2,
+          "name": "source",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 3,
+          "name": "id",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 4,
+          "name": "subtype",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 5,
+          "name": "name",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 6,
+          "name": "coverUrl",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 7,
+          "name": "trackCount",
+          "kotlinType": "Int",
+          "default": "0",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 8,
+          "name": "lastOpenedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 9,
+          "name": "firstOpenedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 10,
+          "name": "openCount",
+          "kotlinType": "Int",
+          "default": "0",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 11,
+          "name": "counterBaseOpenCount",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 12,
+          "name": "counterShards",
+          "kotlinType": "List<SyncPlaybackCounterShard>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 13,
+          "name": "fid",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 14,
+          "name": "mid",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 15,
+          "name": "browseId",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 16,
+          "name": "playlistId",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 17,
+          "name": "subtitle",
+          "kotlinType": "String?",
+          "default": "null",
+          "nullable": true,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        }
+      ]
+    },
+    {
+      "name": "SyncLocalPlaylistPlaybackStat",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "playlistId",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 2,
+          "name": "totalPlayCount",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 3,
+          "name": "lastPlayedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 4,
+          "name": "firstPlayedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 5,
+          "name": "counterBasePlayCount",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 6,
+          "name": "counterShards",
+          "kotlinType": "List<SyncPlaybackCounterShard>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        }
+      ]
+    },
+    {
+      "name": "SyncLocalPlaylistPlaybackBucket",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "dayStartAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 2,
+          "name": "playlistId",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 3,
+          "name": "playCount",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 4,
+          "name": "lastPlayedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 5,
+          "name": "firstPlayedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 6,
+          "name": "counterBasePlayCount",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 7,
+          "name": "counterShards",
+          "kotlinType": "List<SyncPlaybackCounterShard>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        }
+      ]
+    },
+    {
+      "name": "SyncBiliVideoSkipInterval",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncBiliVideoSkipModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "startMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 2,
+          "name": "endMs",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        }
+      ]
+    },
+    {
+      "name": "SyncBiliVideoSkipRule",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncBiliVideoSkipModels.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "bvid",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 2,
+          "name": "cid",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 3,
+          "name": "intervals",
+          "kotlinType": "List<SyncBiliVideoSkipInterval>",
+          "default": "emptyList()",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": null
+        },
+        {
+          "tag": 4,
+          "name": "modifiedAt",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        },
+        {
+          "tag": 5,
+          "name": "isDeleted",
+          "kotlinType": "Boolean",
+          "default": "false",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": null
+        }
+      ]
+    },
+    {
+      "name": "SyncCausalToken",
+      "source": "modules/model/src/main/java/moe/ouom/neriplayer/data/sync/model/SyncCausalToken.kt",
+      "fields": [
+        {
+          "tag": 1,
+          "name": "deviceId",
+          "kotlinType": "String",
+          "default": "\"\"",
+          "nullable": false,
+          "wire": "2 (length-delimited)",
+          "desktop": {
+            "rustName": "device_id",
+            "rustType": "String",
+            "prost": "string, tag = \"1\""
+          }
+        },
+        {
+          "tag": 2,
+          "name": "counter",
+          "kotlinType": "Long",
+          "default": "0L",
+          "nullable": false,
+          "wire": "0 (varint)",
+          "desktop": {
+            "rustName": "counter",
+            "rustType": "i64",
+            "prost": "int64, tag = \"2\""
+          }
+        }
+      ]
+    }
+  ]
+}

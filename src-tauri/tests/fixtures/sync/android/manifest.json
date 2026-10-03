@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "generator": "Android SyncDataSerializer, offline JVM runner",
+  "androidHead": "06cae09d5cdddfc8662fa7868245f83288aca0d7",
+  "fixedTimeMs": 1700000000000,
+  "kotlinVersion": "2.4.10",
+  "serializationVersion": "1.11.0",
+  "command": "python3 tools_pub/quality/sync_interop_fixtures.py export <Desktop>/src-tauri/tests/fixtures/sync/android",
+  "sources": {
+    "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncDataModels.kt": "e85ce2f0160f05151be9ef1fdce61cd8d8892c888242a8a69b90a11efecea24c",
+    "modules/model/src/main/java/moe/ouom/neriplayer/data/model/sync/SyncBiliVideoSkipModels.kt": "a72b58736ef762a3bd5e6f5dc7dc51534b91d5e21562bdedba47a147d8bc1530",
+    "modules/model/src/main/java/moe/ouom/neriplayer/data/sync/model/SyncCausalToken.kt": "29656e3dd823d10930d92909d8bfd43b00dd574add8bf5331c09e0a1e7de0482",
+    "modules/sync/src/main/java/moe/ouom/neriplayer/data/sync/codec/SyncDataSerializer.kt": "33641ef9f634ca2694dc01180b81301cbff16621ca92bc03278641be2858a5dc",
+    "modules/sync/src/main/java/moe/ouom/neriplayer/data/sync/policy/SyncCoverUrlPolicy.kt": "91c32f8adea7c8fbf0208abbf966270cb96595545eb63965eab36fad267e17bc",
+    "modules/sync/src/test/java/moe/ouom/neriplayer/data/sync/codec/SyncInteropFixtureTest.kt": "c433a29f87711c9fc627c030926efcf9aeb80be2f15a2436666a3eff45d16cd3",
+    "tools_pub/quality/sync_interop_fixtures.py": "74f68d60588d3a3f51058441258e205ede4a9806ab95580171a5bdd99ea24d51"
+  },
+  "auxiliaryModelJarSha256": "4be84e1f6e27c48cd834f3648e11b7814191f21b5aa7545eab08daf831c5d2f9",
+  "dependencies": {
+    "kotlin-compiler-embeddable-2.4.10.jar": "9309638a2ee03e6bde9ef4b7444055a94b84ab906563675d71ff9aecb64da913",
+    "kotlin-stdlib-2.4.10.jar": "4ec0293bc3751423b203f1d8493251c57c42e73eb6377a6b8560d0974ff0a6df",
+    "kotlin-reflect-2.3.21.jar": "33e37d9dfa86c7a29ab34e975b5f4a1287b458878611051f3485652220c1a2cb",
+    "kotlin-script-runtime-2.4.10.jar": "f4a5b30c2fdfbe386b097101b7989dbeea3743c06396136664784e08e15c6899",
+    "kotlinx-coroutines-core-jvm-1.11.0.jar": "d1d75aa01dffbb4d1c520e67e4c4e7f5f6174718e7cb4632412503f2f0e604fa",
+    "annotations-23.0.0.jar": "7b0f19724082cbfcbc66e5abea2b9bc92cf08a1ea11e191933ed43801eb3cd05",
+    "kotlin-serialization-compiler-plugin-embeddable-2.4.10.jar": "b1467b515c7dd8b24a79bd402a41ac7d2c208c6be96b5b53d21f8147d6566f5e",
+    "kotlin-parcelize-compiler-2.4.10.jar": "72191e92ae59b4ceb1633c4d64bf27605905d64c6ec60e52fae34aed26b08a8e",
+    "kotlin-parcelize-runtime-2.4.10.jar": "7412bf6bafc55c056e4bf887fe34fda6b0b3bc33478762c41f552db8e6ad3734",
+    "junit-4.13.2.jar": "8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3",
+    "hamcrest-core-1.3.jar": "66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9",
+    "kotlinx-serialization-core-jvm-1.11.0.jar": "f4a801c647d4351327cd9e1ac4113e2be9ea37a64ab0abae269c25a52e28f35d",
+    "kotlinx-serialization-json-jvm-1.11.0.jar": "563a25b4eb5c9128ae9c2479f3d1a5c44dcd176112b91cf03682e906eba5c935",
+    "kotlinx-serialization-protobuf-jvm-1.11.0.jar": "3a48b3959b6ddf54d9674bd4b4e3302694a24d24141b38ca98b6ac4fc657675f",
+    "android.jar": "bf1b4387cc7ca94fc6ef684f040d9d16fbf16248e181819f020736ea2053f177",
+    "core-ktx-1.19.0.aar": "db1ae24b15c36358ad46497d561b19c325642565432d56479ebe47ee3baa0d7e",
+    "core-1.19.0.aar": "55445ad0ff025963929892569a0bfc6b4c68e60d8b7c965dcffba09048c36c8e"
+  },
+  "limits": "Android API stubs and cached model auxiliary types; no full module/APK/device or merge/persistence validation",
+  "fixtures": {
+    "cleared.json": {
+      "bytes": 6204,
+      "sha256": "64cbbf1d2f027ba96204c6dd79e2fba9012e0ca699f759bf1033e64552a68339"
+    },
+    "cleared.legacy.base64": {
+      "bytes": 1024,
+      "sha256": "a94b28838b3b6ac5df8420900fc5c4176cb63a16601620646be62f7126c0b194"
+    },
+    "cleared.raw.bin": {
+      "bytes": 768,
+      "sha256": "17cbbe9ab69d3ccf7a2b717810862fbdb2c3c191adaec84cf0419152cfc20f5c"
+    },
+    "defaults.json": {
+      "bytes": 381,
+      "sha256": "569073f4ee56443ed309453a3690ba2245fedcd98c497c2fb5a361bb9780787e"
+    },
+    "defaults.legacy.base64": {
+      "bytes": 36,
+      "sha256": "531489e9dfeed43ce7aeeff169ee80f7eb5887d47de5d6c07c157c2fb5f3a79e"
+    },
+    "defaults.raw.bin": {
+      "bytes": 27,
+      "sha256": "0b091b21898135f0a3a22e9a12e28750fd148a494957549b305f3d1a57894882"
+    },
+    "deleted.json": {
+      "bytes": 8388,
+      "sha256": "9c801f84dd5c52b6410f345792391f8ea4f8beae91678e5042af100a3c97e743"
+    },
+    "deleted.legacy.base64": {
+      "bytes": 1244,
+      "sha256": "5e2c22c9ee1f36af607d9ab05af82bed955a8380f9a61f2ee75d039da35264f1"
+    },
+    "deleted.raw.bin": {
+      "bytes": 932,
+      "sha256": "b264c24ba1a9dd0ddea74bc29011153f4672dff0582a5d3632a9ca497ed644ee"
+    },
+    "full.json": {
+      "bytes": 9381,
+      "sha256": "7238d0ced13816fe6e62c16ee6b0a1a82e9ece70cb72d95f858066689e45a9e1"
+    },
+    "full.legacy.base64": {
+      "bytes": 1272,
+      "sha256": "5ef622f524a8c6ec9328c588f029827bac4eac62210f671d98ca4edb5bdc111c"
+    },
+    "full.raw.bin": {
+      "bytes": 953,
+      "sha256": "1bb81d8ee1ff2791fbbbfd8d595632a03b3dd3cb6e6c9047dd99c2b09f3e26f5"
+    },
+    "readded.json": {
+      "bytes": 9381,
+      "sha256": "b9d906db18053a2cf9814caaa447399ec0b98076fd285db219d591239bef7143"
+    },
+    "readded.legacy.base64": {
+      "bytes": 1284,
+      "sha256": "8a106f1df3f4353256811e3830fc9d38ea7711dbbf36a170c470d581e6aef9c2"
+    },
+    "readded.raw.bin": {
+      "bytes": 962,
+      "sha256": "8467bf933e45c1bfaf5a4a5916de17f356bf9846648a0022dc2864146cf84aaf"
+    }
+  }
+}
